@@ -1,4 +1,4 @@
-This is a app to help keep sprint reviews moving along.
+An app to help keep sprint reviews moving along.
 
 ## Getting Started
 
