@@ -1,10 +1,11 @@
-import React from 'react'
-import { signIn} from "next-auth/react";
+import React from "react";
+import { signIn, useSession } from "next-auth/react";
 
-export default function LoggedOut() { 
-
-    return (
-      <section className="grid h-screen place-items-center">
+export default function LoggedOut() {
+  const { data: session, status } = useSession();
+  
+  return (
+    <section className="grid h-screen place-items-center">
       <div className="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 justify-center items-center text-center">
         <h2 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
           Whizzo
@@ -23,6 +24,5 @@ export default function LoggedOut() {
         </button>
       </div>
     </section>
-    )
-  }
-
+  );
+}

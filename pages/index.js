@@ -3,7 +3,7 @@ import { ref, set, get, onValue, push, child, update } from "firebase/database";
 import { app, realDb } from "../firebaseConfig";
 import Loggedin from "../pages/loggedIn/LoggedIn";
 import { useEffect, useState } from "react";
-import LoggedOut from "../Components/LoggedOut/LoggedOut";
+import LoggedOut from "./LoggedOut";
 import { useUserDetails } from "../Functions/UserContext";
 import MyNavBar from "../Components/mynavbar";
 

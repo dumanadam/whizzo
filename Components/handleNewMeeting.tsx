@@ -4,7 +4,7 @@ import { ref, set, get, onValue, push, child, update } from "firebase/database";
 import { useSession, signIn, signOut, SessionContext, SessionProvider } from "next-auth/react";
 import { v4 } from "uuid";
 import { Session } from 'next-auth';
-import { useUserDetails } from '../Functions/UserContext';
+
 
 
 
@@ -14,7 +14,7 @@ export default function HandleNewMeeting(session : Session, props : React.PropsW
     console.log('ses', session);
     const {user : {name, email, image}}  = session;
     console.log('ses name', name);
-    console.log("user context", useUserDetails());
+    
     
 
     
