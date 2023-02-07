@@ -4,11 +4,11 @@ import "flowbite";
 import { Navbar, Button, Dropdown, Avatar } from "flowbite-react";
 
 function MyNavBar() {
-  const { data: session} = useSession();
+  const { data: session } = useSession();
   return (
     <>
       <Navbar fluid={true} rounded={true}>
-        <Navbar.Brand href="https://flowbite.com/">
+        <Navbar.Brand href="http://localhost:3000">
           <img
             src="https://flowbite.com/docs/images/logo.svg"
             className="mr-3 h-6 sm:h-9"
@@ -33,7 +33,7 @@ function MyNavBar() {
             <Dropdown.Header>
               <span className="block text-sm">{session.user.name}</span>
               <span className="block truncate text-sm font-medium">
-              {session.user.email}
+                {session.user.email}
               </span>
             </Dropdown.Header>
             <Dropdown.Item>Dashboard</Dropdown.Item>
@@ -45,8 +45,12 @@ function MyNavBar() {
           <Navbar.Toggle />
         </div>
         <Navbar.Collapse>
-          <Navbar.Link href="/navbars" active={true}>Sessions</Navbar.Link>
-          <Navbar.Link href="/navbars" onClick={() => signOut()}>Logout</Navbar.Link>
+          <Navbar.Link href="/meetings/" active={true}>
+            Sessions
+          </Navbar.Link>
+          <Navbar.Link href="/" onClick={() => signOut()}>
+            Logout
+          </Navbar.Link>
         </Navbar.Collapse>
       </Navbar>
     </>

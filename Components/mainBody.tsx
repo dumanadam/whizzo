@@ -1,19 +1,14 @@
 import React from "react";
-import { useSession, signIn, signOut, SessionContext } from "next-auth/react";
-import "flowbite";
-
-import MyNavBar from "./mynavbar";
 import ButtonCard from "./Card/ButtonCard";
 
-function loggedin(props) {
-  const { data: session, status } = useSession();
+function MainBody() {
   return (
-    <>
-      <div className="grid h-screen place-items-center">
-       <ButtonCard props={props}/>
+    <div className="flex items-center justify-center h-screen bg-blue-500">
+      <div className="flex">
+        <ButtonCard />
       </div>
-    </>
+    </div>
   );
 }
 
-export default loggedin;
+export default MainBody;

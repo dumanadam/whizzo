@@ -23,7 +23,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-, "Components/lib/firebase/functions/getSession.tsx"  ],
+, "Components/lib/firebase/functions/getSession.tsx", "pages/index.js"  ],
   "exclude": [
     "node_modules"
   ]
