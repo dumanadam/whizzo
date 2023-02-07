@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import { Navbar, Button, Dropdown, Card } from "flowbite-react";
 import { useSession, signIn, signOut, SessionContext } from "next-auth/react";
 import { useState } from "react";
-import handleNewMeeting from "../handleNewMeeting";
+import handleNewMeeting from "../HandleNewMeeting";
 import { useCollection } from "react-firebase-hooks/firestore";
 import { app } from "../../firebaseConfig";
 

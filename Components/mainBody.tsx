@@ -3,7 +3,7 @@ import { useSession, signIn, signOut, SessionContext } from "next-auth/react";
 import "flowbite";
 
 import MyNavBar from "./mynavbar";
-import ButtonCard from "../Components/Card/buttonCard";
+import ButtonCard from "./Card/ButtonCard";
 
 function loggedin(props) {
   const { data: session, status } = useSession();

@@ -1,8 +1,6 @@
 import React from 'react'
-import { app, realDB, initFirebase } from "../firebaseConfig";
-import { ref, set, get, onValue } from "firebase/database";
+import {app} from "../firebaseConfig";
 import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
-import {useAuthState} from "react-firebase-hooks/auth"
 
 function handleNewMeeting(props) {
     const provider = new GoogleAuthProvider();
