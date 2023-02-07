@@ -4,7 +4,7 @@ import "flowbite";
 import { Navbar, Button, Dropdown, Avatar } from "flowbite-react";
 
 function MyNavBar() {
-  const { data: session, status } = useSession();
+  const { data: session} = useSession();
   return (
     <>
       <Navbar fluid={true} rounded={true}>

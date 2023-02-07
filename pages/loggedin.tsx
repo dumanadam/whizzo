@@ -6,7 +6,7 @@ function loggedin(props) {
   return (
     <>
       <MyNavBar/>
-      <MainBody />
+      <MainBody  state={props}/>
     </>
   );
 }

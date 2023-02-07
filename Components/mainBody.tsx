@@ -5,12 +5,12 @@ import "flowbite";
 import MyNavBar from "./mynavbar";
 import ButtonCard from "../Components/Card/buttonCard";
 
-function loggedin() {
+function loggedin(props) {
   const { data: session, status } = useSession();
   return (
     <>
       <div className="grid h-screen place-items-center">
-       <ButtonCard/>
+       <ButtonCard props={props}/>
       </div>
     </>
   );
