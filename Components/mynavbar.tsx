@@ -1,11 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useSession, signIn, signOut, SessionContext } from "next-auth/react";
 import "flowbite";
 import { Navbar, Button, Dropdown, Avatar } from "flowbite-react";
-import { log } from "console";
+import { useUserDetails } from "../Functions/UserContext";
 
 function MyNavBar() {
   const { data: session, status } = useSession();
+  const {userDetails, setUserDetails} = useUserDetails();
+  
+  useEffect(() => {
+    console.log("navbar userDetauils", userDetails);
+  }, [userDetails]);
 
   const IsLoggedIn = () => {
     if (status === "authenticated") {
@@ -27,10 +32,15 @@ function MyNavBar() {
             inline={true}
             label={
               <Avatar
-                alt="User settings"
-                img={session?.user.image}
-                rounded={true}
-              />
+              img={(props) => (
+                <img
+                  referrerPolicy="no-referrer"
+                  src={session?.user.image}
+                  {...props}
+                />
+              )}
+            />
+            
             }
           >
             <Dropdown.Header>
