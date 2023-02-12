@@ -21,7 +21,7 @@ export default function CreateNewMeeting() {
 
   const hcreate = () => {
     var res = handleCreate(roomName, timer, userDetails, setUserDetails);
-    if (res) router.push("/meetings");
+    if (res) router.push("/");
   };
 
   return (

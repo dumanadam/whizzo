@@ -3,9 +3,11 @@ import React from "react";
 import { Card } from "flowbite-react";
 import { signOut } from "next-auth/react";
 import Link from "next/link";
+import Meeting from '../../pages/meetings/index'
 
 export default function ButtonCard() {
   return (
+    <div className="flex">
     <Card className="m-4 w-[278px]">
       <div className="flex flex-col items-center pb-6 p-4">
         <p className="text-center pt-2 px-4 items-center text-xl text-black">
@@ -23,17 +25,19 @@ export default function ButtonCard() {
             href="/meetings/create"
             className="inline-flex items-center rounded-lg bg-blue-700 py-2 px-4 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
           >
-            Create
+            Create Review
           </Link>
-          <a
-            href="#"
+         {/*  <Link
+            href="/meetings"
             className="inline-flex items-center rounded-lg bg-blue-700 py-2 px-4 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-            onClick={(e) => signOut()}
+//            onClick={(e) => signOut()}
           >
             Join
-          </a>
+          </Link> */}
         </div>
       </div>
     </Card>
+    <Meeting></Meeting>
+    </div>
   );
 }

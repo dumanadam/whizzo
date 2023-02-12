@@ -16,25 +16,23 @@ function handleCreate(
   const userRef = ref(realDb, "users/" + userDetails.email.replace(/\./g, ","));
   const meetingRef = ref(realDb, "meetings/" + newMeetingKey);
 
-  var updatedDetails = {
-    email: userDetails.email,
-    profile_picture: userDetails.image,
-    inMeeting: {
-      meetingId: newMeetingKey,
-      attendees: [userDetails.email],
-      creator: userDetails.email,
-      timer: timer,
-      roomname: roomName,
-    },
+  var meetingDetails = {
+    creatorProfilePicture: userDetails.image,
+    creatorEmail: userDetails.email,
+    creatorName: userDetails.name,
+    meetingId: newMeetingKey,
+    attendees: [userDetails.email],
+    timer: timer,
+    roomName: roomName,    
   };
 
   setUserDetails({
     ...userDetails,
-    ...updatedDetails,
+    ...meetingDetails,
   });
 
   set(meetingRef, {
-    ...updatedDetails,
+    ...meetingDetails,
   });
 
   set(userRef, {
