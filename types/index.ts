@@ -1,4 +1,5 @@
 import { type } from "os";
+import { ReactNode } from "react";
 
 export interface FBaseUserDetails {
   name: string;
@@ -22,4 +23,15 @@ export interface FBaseMeeting {
   meetingId: string;
   roomname: string;
   timer: number | null;
+}
+
+export type ReviewRoomDetails = {
+  meetingType: {
+    cards: number;
+    titles : string[]
+  }
+  updateState: {
+    getCardText: () => ReactNode,
+    setCardText: (text: React.ChangeEvent<HTMLTextAreaElement> | any) => void
+  }
 }

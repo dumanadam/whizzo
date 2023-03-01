@@ -6,8 +6,10 @@ export default function Layout({ children }) {
   return (
     <>
       <UserContextProvider>
-        <MyNavBar />
-        <main className="bg-sky-900 h-screen">{children}</main>
+        <div className="dark:bg-blue1 text-center text-sm text-gray-300 dark:text-bl h-screen w-screen">
+          <MyNavBar />
+          <main>{children}</main>
+        </div>
       </UserContextProvider>
     </>
   );
